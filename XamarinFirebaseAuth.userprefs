@@ -1,10 +1,15 @@
-﻿<Properties StartupConfiguration="{142BEDCE-67AC-4A13-AAD6-7AB428F9AA2B}|Default">
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupConfiguration="{7A7E00D9-42F0-4E5D-851F-6DF976B08D18}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinFirebaseAuth/ViewModel/ViewModelLocator.cs">
+    <Files>
+      <File FileName="XamarinFirebaseAuth/ViewModel/ViewModelLocator.cs" Line="32" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XamarinFirebaseAuth.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.XamarinFirebaseAuth.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4BF84624-945F-4B62-9A76-F60C897E292B" />
 </Properties>
