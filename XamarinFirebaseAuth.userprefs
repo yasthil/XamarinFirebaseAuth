@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{7A7E00D9-42F0-4E5D-851F-6DF976B08D18}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinFirebaseAuth/ViewModel/ViewModelLocator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinFirebaseAuth/ViewModel/MainViewModel.cs">
     <Files>
-      <File FileName="XamarinFirebaseAuth/ViewModel/ViewModelLocator.cs" Line="32" Column="23" />
+      <File FileName="XamarinFirebaseAuth/ViewModel/ViewModelLocator.cs" Line="30" Column="34" />
+      <File FileName="XamarinFirebaseAuth/ViewModel/MainViewModel.cs" Line="17" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
