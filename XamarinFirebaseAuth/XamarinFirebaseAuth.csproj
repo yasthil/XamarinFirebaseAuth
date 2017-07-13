@@ -28,18 +28,20 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="XamarinFirebaseAuthPage.xaml" />
+    <EmbeddedResource Include="Views\XamarinFirebaseAuthPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="XamarinFirebaseAuthPage.xaml.cs">
-      <DependentUpon>XamarinFirebaseAuthPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Views\XamarinFirebaseAuthPage.xaml.cs">
+      <DependentUpon>XamarinFirebaseAuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\XamarinFirebaseAuthPageViewModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

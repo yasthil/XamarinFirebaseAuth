@@ -1,6 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFirebaseAuth.App">
 	<Application.Resources>
+        <vm:ViewModelLocator xmlns:vm="clr-namespace:XamarinFirebaseAuth"
+                           x:Key="Locator" />
 		<!-- Application resource dictionary -->
 	</Application.Resources>
 </Application>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:XamarinFirebaseAuth" 
+    x:Class="XamarinFirebaseAuth.XamarinFirebaseAuthPage">
+	 <ContentPage.Content>
+        <StackLayout>
+            <Entry
+                DataContext="{Binding MainPage, Source={StaticResource ViewModelLocator}}"
+                x:Name="Email" Placeholder="Email" BackgroundColor="#2c3e84">
+            </Entry>
+            <Entry x:Name="Password" Placeholder="Password" IsPassword="true" BackgroundColor="#2c3e50">
+            </Entry>
+
+            <Button x:Name="btnLogin" Text="Login" >
+            </Button>
+            <Button x:Name="btnSignup" Text="Sign Up" >
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
