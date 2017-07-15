@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Firebase;
 
 namespace XamarinFirebaseAuth.Droid
 {
@@ -21,7 +22,7 @@ namespace XamarinFirebaseAuth.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-
+            FirebaseApp.InitializeApp(Android.App.Application.Context);
             LoadApplication(new App());
         }
     }

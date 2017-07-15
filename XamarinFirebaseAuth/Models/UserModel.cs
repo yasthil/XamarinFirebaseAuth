@@ -8,8 +8,6 @@ namespace XamarinFirebaseAuth.Models
     /// </summary>
     public class UserModel : ObservableObject
     {
-        private string _username;
-        private string _password;
         public UserModel()
         {
 

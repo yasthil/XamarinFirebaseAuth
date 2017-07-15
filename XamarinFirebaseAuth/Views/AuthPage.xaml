@@ -13,10 +13,12 @@
                 x:Name="Password" Text ="{Binding Password}" Placeholder="Password" IsPassword="true" BackgroundColor="#2c3e50">
             </Entry>
 
-            <Button x:Name="btnLogin" Text="Login" >
+            <Button x:Name="btnLogin" Text="Login" Command="{Binding LoginCommand}" >
             </Button>
-            <Button x:Name="btnSignup" Text="Sign Up" >
+            <Button x:Name="btnSignup" Text="Sign Up" Command="{Binding SignUpCommand}" >
             </Button>
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
