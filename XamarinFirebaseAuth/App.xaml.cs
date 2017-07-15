@@ -4,11 +4,13 @@ namespace XamarinFirebaseAuth
 {
     public partial class App : Application
     {
+        private Page _navPage;
+
         public App()
         {
             InitializeComponent();
-
-            MainPage = new XamarinFirebaseAuthPage();
+            
+            _navPage = MainPage = new NavigationPage(new AuthPage());
         }
 
         protected override void OnStart()
