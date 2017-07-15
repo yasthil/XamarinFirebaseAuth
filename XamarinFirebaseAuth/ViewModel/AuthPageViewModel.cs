@@ -8,22 +8,12 @@ namespace XamarinFirebaseAuth.ViewModel
     {
         private string _email;
         private string _password;
-
         public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Used to notify bound items that a property has changed
-        /// </summary>
-        /// <param name="name"></param>
-        public void OnPropertyChanged([CallerMemberName]string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
 
         public AuthPageViewModel()
         {
         }
-
+        #region Properties
         public string Email
         {
             get { return _email; }
@@ -44,7 +34,22 @@ namespace XamarinFirebaseAuth.ViewModel
                 OnPropertyChanged();
             }
         }
+        #endregion
 
+        #region Functions
+
+        /// <summary>
+        /// Used to notify bound items that a property has changed
+        /// </summary>
+        /// <param name="name"></param>
+        public void OnPropertyChanged([CallerMemberName]string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        /// <summary>
+        /// Used so a UI Label can bind to the Email property
+        /// </summary>
         public string DisplayMessage
         {
             get
@@ -52,5 +57,7 @@ namespace XamarinFirebaseAuth.ViewModel
                 return $"Hi {Email}\nWelcome to XamarinFirebaseAuth";
             }
         }
+        #endregion
+
     }
 }
