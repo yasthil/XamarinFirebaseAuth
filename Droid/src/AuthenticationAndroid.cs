@@ -81,18 +81,19 @@ namespace XamarinFirebaseAuth.Droid.src
             {
                 if (_isLogin)
                 {
-                    //Toast.MakeText(Xamarin.Forms.Forms.Context, "Login Successful", ToastLength.Short).Show();
+                    // user logged in successfully
                 }
                 else if (_isSignUp)
                 {
-                    //Toast.MakeText(Xamarin.Forms.Forms.Context, "Sign Up Successful, logging in...", ToastLength.Short).Show();
-                }
+					// user signed up and logged in successfully
+				}
 
                 FirebaseAuth.Instance.AuthState -= AuthStateChanged;
 
-                // Once the user is signed in, go to landing page
+				// Once the user is signed in, go to greeting page
+                App.Current.MainPage.Navigation.PushAsync(new GreetingPage());
 
-            }
+			}
             else
             {
                 // User is signed out

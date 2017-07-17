@@ -1,12 +1,10 @@
 ﻿<Properties StartupConfiguration="{7A7E00D9-42F0-4E5D-851F-6DF976B08D18}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinFirebaseAuth/Models/UserModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinFirebaseAuth/ViewModel/AuthPageViewModel.cs">
     <Files>
-      <File FileName="XamarinFirebaseAuth/ViewModel/ViewModelLocator.cs" Line="45" Column="48" />
-      <File FileName="XamarinFirebaseAuth/Views/XamarinFirebaseAuthPage.xaml" Line="9" Column="91" />
-      <File FileName="XamarinFirebaseAuth/App.xaml" Line="5" Column="46" />
-      <File FileName="XamarinFirebaseAuth/ViewModel/MainViewModel.cs" Line="9" Column="16" />
-      <File FileName="XamarinFirebaseAuth/ViewModel/XamarinFirebaseAuthPageViewModel.cs" Line="10" Column="13" />
-      <File FileName="XamarinFirebaseAuth/Models/UserModel.cs" Line="4" Column="30" />
+      <File FileName="XamarinFirebaseAuth/ViewModel/AuthPageViewModel.cs" Line="86" Column="26" />
+      <File FileName="XamarinFirebaseAuth/ViewModel/GreetingPageViewModel.cs" Line="10" Column="32" />
+      <File FileName="XamarinFirebaseAuth/Views/GreetingPage.xaml" Line="10" Column="15" />
+      <File FileName="XamarinFirebaseAuth/Views/GreetingPage.xaml.cs" Line="14" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

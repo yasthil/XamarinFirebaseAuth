@@ -29,6 +29,9 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="Views\AuthPage.xaml" />
+    <EmbeddedResource Include="Views\GreetingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -43,6 +46,10 @@
     </Compile>
     <Compile Include="ViewModel\AuthPageViewModel.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="ViewModel\GreetingPageViewModel.cs" />
+    <Compile Include="Views\GreetingPage.xaml.cs">
+      <DependentUpon>GreetingPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
