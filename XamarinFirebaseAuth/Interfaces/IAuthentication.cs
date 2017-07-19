@@ -13,6 +13,9 @@ namespace XamarinFirebaseAuth.Interfaces
     {
         void SignUp(string email, string password);
         void Login(string email, string password);
+        void SignOut();
+        bool IsBusy();
+        event EventHandler<FirebaseAuthEventData> CustomAuthStateChanged;
     }
 
 }

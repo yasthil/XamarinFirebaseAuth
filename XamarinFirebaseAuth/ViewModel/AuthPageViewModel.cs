@@ -13,20 +13,18 @@ namespace XamarinFirebaseAuth.ViewModel
         private bool _isBusy;
         private Command _loginCommand;
         private Command _signUpCommand;
+        private IAuthentication _iAuthService;
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public AuthPageViewModel()
         {
-            // execute if we're not busy
-            //LoginCommand = new Command(async () => await Login(),
-            //    () => !IsBusy);
-
             LoginCommand = new Command(Login);
-
-            // execute if we're not busy
-            //SignUpCommand = new Command(async () => await SignUp(),
-            //    () => !IsBusy);
             SignUpCommand = new Command(SignUp);
+
+            _iAuthService = DependencyService.Get<IAuthentication>();
+            _iAuthService.SignOut();
+            
         }
         #region Properties
         public string Email
@@ -56,11 +54,7 @@ namespace XamarinFirebaseAuth.ViewModel
             set
             {
                 _isBusy = value;
-                OnPropertyChanged();
-
-                // re-evaluate if we can execute again
-                LoginCommand.ChangeCanExecute();
-                SignUpCommand.ChangeCanExecute();
+                OnPropertyChanged();                
             }
         }
         #endregion
@@ -82,7 +76,7 @@ namespace XamarinFirebaseAuth.ViewModel
         public Command SignUpCommand
         {
             get
-            {               
+            {
                 return _signUpCommand;
             }
             set
@@ -93,14 +87,36 @@ namespace XamarinFirebaseAuth.ViewModel
 
         private void Login()
         {
-            //await DependencyService.Get<IAuthentication>().Login(Email, Password).ContinueWith((task) => { IsBusy = false; });
-            DependencyService.Get<IAuthentication>().Login(Email, Password);
+            _iAuthService = DependencyService.Get<IAuthentication>();
+            _iAuthService.SignOut();
+            IsBusy = true;
+            _iAuthService.CustomAuthStateChanged += OnCustomAuthStateChanged;          
+            _iAuthService.Login(Email, Password);
         }
 
         private void SignUp()
         {
-            //DependencyService.Get<IAuthentication>().SignUp(Email, Password).ContinueWith((task) => { IsBusy = false; });
-            DependencyService.Get<IAuthentication>().SignUp(Email, Password);
+            _iAuthService = DependencyService.Get<IAuthentication>();
+            _iAuthService.SignOut();
+            IsBusy = true;
+            _iAuthService.CustomAuthStateChanged += OnCustomAuthStateChanged;            
+            _iAuthService.SignUp(Email, Password);
+        }
+
+        private void OnCustomAuthStateChanged(object sender, FirebaseAuthEventData e)
+        {
+            // whether we're logged in or failed to login, stop the ActivityIndicator
+            IsBusy = false;
+
+            // de-register the event listner - this prevents OnCustomAuthStateChanged from being called multiple times
+            _iAuthService.CustomAuthStateChanged -= OnCustomAuthStateChanged;
+
+            if (e.HasLoggedIn)
+            {
+                Email = "";
+                Password = "";
+                App.Current.MainPage.Navigation.PushAsync(new GreetingPage());
+            }
         }
 
         /// <summary>
@@ -122,6 +138,7 @@ namespace XamarinFirebaseAuth.ViewModel
                 return $"Hi {Email}\nWelcome to XamarinFirebaseAuth";
             }
         }
+
         #endregion
 
     }

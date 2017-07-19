@@ -11,7 +11,7 @@ namespace XamarinFirebaseAuth
 
             // bind the context to the view model
             BindingContext = new AuthPageViewModel();
-            
+
         }
     }
 }
