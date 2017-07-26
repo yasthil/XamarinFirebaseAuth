@@ -110,10 +110,13 @@ namespace XamarinFirebaseAuth.Droid.src
                 _hasLoggedIn = false;
             }
         }
-        
-        
 
-        public void OnCustomAuthStateChanged()
+
+		/// <summary>
+        /// Used to dispatch event CustomAuthStateChanged event 
+        /// This informs listeners about the status of the authentication
+		/// </summary>
+		public void OnCustomAuthStateChanged()
         {            
             CustomAuthStateChanged?.Invoke(this, new FirebaseAuthEventData(_isLogin, _isSignUp, _hasLoggedIn));
         }
