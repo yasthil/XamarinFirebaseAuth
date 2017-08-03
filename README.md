@@ -1,6 +1,6 @@
 # XamarinFirebaseAuth's README
 
-A basic Xamarin.Forms structure for easy authentication, using and Email and Password, via Firebase on both Android and iOS.
+A basic Xamarin.Forms structure for easy authentication, using and Email and Password, via Firebase on Android *(iOS support will be added in the future)*
 
 ![Alt Text](https://github.com/yasthil/XamarinFirebaseAuth/blob/develop/XamarinFirebaseAuth/Misc/XamarinFirebaseAuthScreenGrab.gif)
 
