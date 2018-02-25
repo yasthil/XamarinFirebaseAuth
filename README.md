@@ -22,6 +22,9 @@ Please install the latest version of Visual Studio with the following NuGet pack
 * Xamarin.Firebase.lid
 * Xamarin.Firebase.Messenging
 
+## google-services.json
+Please make sure you place your google-services.json into the Droid directory. This will allow communications with your own Firebase Auth service.
+
 ## Built With
 * [Visual Studio 2017](https://www.visualstudio.com/vs/)
 * [Xamarin](https://www.xamarin.com/)
